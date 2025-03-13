@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const User = require("../models/userModel");
 const Admin = require("../models/adminModel");
 
 const bcrypt = require("bcrypt");
@@ -124,8 +123,6 @@ router.post("/logout",(req,res)=>{
     return res.status(200).json({message:"loged out"});
 });
 
-router.get("/",(req,res)=>{
-    res.send("hi")
-})
+
 
 module.exports = router;
