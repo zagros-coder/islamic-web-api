@@ -118,11 +118,4 @@ router.post("/admin/login",async(req,res)=>{
 });
 
 
-router.post("/logout",(req,res)=>{
-   
-    return res.status(200).json({message:"loged out"});
-});
-
-
-
 module.exports = router;

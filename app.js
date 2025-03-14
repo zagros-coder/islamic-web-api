@@ -20,8 +20,7 @@ if(connection){
 }
 
 
-
-
 app.listen(port, ()=>{
+
     console.log("Server started");
 });

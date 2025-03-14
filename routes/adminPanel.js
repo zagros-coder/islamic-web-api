@@ -58,8 +58,8 @@ router.delete("/deletebook/:id",async(req,res)=>{
     return res.status(200).json({message:"book deleted"});
 
     }catch(err){
-        return res.status(400).json({message:err.message})
-    }
+        return res.status(400).json({message:err.message});
+    };
 
 });
 
@@ -117,4 +117,4 @@ router.get("/feedbacks",async(req,res)=>{
 })
 
 
-module.exports = router;
+module.exports = router; 
