@@ -86,7 +86,7 @@ router.get("/views",(req,res)=>{
 router.post("/feedback" , async(req,res)=>{
    try{
     const {comment,stars} = req.body;
-    if(!name||!comment){
+    if(!stars||!comment){
         return res.status(400).json({message:"all fields are required"});
     }
     const feed = await Feed.create({
