@@ -93,7 +93,10 @@ router.post("/feedback" , async(req,res)=>{
         comment,
         stars:`${stars} stars`
     });
-    return res.status(200).json(feed);
+    return res.status(200).json({
+        feed,
+        message:"comment posted"
+    });
 
    }catch(Err){
     return res.status(400).json({message:Err.message});
