@@ -7,11 +7,16 @@ const mongoose = require("mongoose");
 const register = require("./routes/auth");
 const adminPanel = require("./routes/adminPanel");
 
+app.use(cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+    allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Authorization"]  // allow all headers for CORS requests
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(register);
 app.use(adminPanel);
-app.use(cors());
 env.config(); 
 const connection = mongoose.connect(process.env.DB);
 
